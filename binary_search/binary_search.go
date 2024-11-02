@@ -1,6 +1,7 @@
 package algorithms
 
-func BinarySearch(array []int, value int) int {
+
+func BinarySearch(array []int, target int) int {
 	lower_index := 0
 	higher_index := len(array)
 
@@ -9,9 +10,9 @@ func BinarySearch(array []int, value int) int {
 
 		currValue := array[m]
 
-		if currValue == value {
+		if currValue == target {
 			return m
-		} else if value > currValue {
+		} else if target > currValue {
 			lower_index = m + 1
 		} else {
 			higher_index = m
