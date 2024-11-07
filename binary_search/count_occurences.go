@@ -19,7 +19,7 @@ func findLimitRange(nums []int, target int, findFirst bool) int {
 
 	limitIndex := -1
 
-	for {
+	for higher > lower {
 		mid := lower + (higher - lower) / 2
 		currValue := nums[mid]
 		if currValue == target {
@@ -33,10 +33,6 @@ func findLimitRange(nums []int, target int, findFirst bool) int {
 			lower = mid + 1
 		} else {
 			higher = mid
-		}
-		
-		if lower >= higher {
-			break
 		}
 	}
 
